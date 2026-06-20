@@ -2,12 +2,12 @@
 import { useState } from 'react'
 
 export default function RegistryPage() {
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState<string | null>(null)
 
-  function copyZelle() {
-    navigator.clipboard.writeText('riddhik2364@gmail.com')
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
+  function copy(text: string, label: string) {
+    navigator.clipboard.writeText(text)
+    setCopied(label)
+    setTimeout(() => setCopied(null), 2000)
   }
 
   return (
@@ -32,17 +32,17 @@ export default function RegistryPage() {
                 We're dreaming of a honeymoon adventure and would love your contribution toward our trip — flights, a special dinner, a day excursion, or just the memories.
               </p>
               <div className="flex flex-col gap-3">
-                <p className="text-xs tracking-widest uppercase opacity-50">Contribute via Zelle</p>
+                <p className="text-xs tracking-widest uppercase opacity-50">Send via Zelle — use either:</p>
                 <div className="flex items-center gap-3">
-                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">
-                    riddhik2364@gmail.com
-                  </code>
-                  <button
-                    onClick={copyZelle}
-                    className="text-xs tracking-widest uppercase px-4 py-2 border transition-all"
-                    style={{ borderColor: '#c9a84c', color: '#c9a84c' }}
-                  >
-                    {copied ? 'Copied!' : 'Copy'}
+                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">riddhipatel2224@gmail.com</code>
+                  <button onClick={() => copy('riddhipatel2224@gmail.com', 'email')} className="text-xs tracking-widest uppercase px-4 py-2 border transition-all flex-shrink-0" style={{ borderColor: '#c9a84c', color: '#c9a84c' }}>
+                    {copied === 'email' ? 'Copied!' : 'Copy'}
+                  </button>
+                </div>
+                <div className="flex items-center gap-3">
+                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">+1 (737) 274-2145</code>
+                  <button onClick={() => copy('+17372742145', 'phone')} className="text-xs tracking-widest uppercase px-4 py-2 border transition-all flex-shrink-0" style={{ borderColor: '#c9a84c', color: '#c9a84c' }}>
+                    {copied === 'phone' ? 'Copied!' : 'Copy'}
                   </button>
                 </div>
                 <p className="text-xs opacity-40">Add "Honeymoon" in the memo so we know what it's for 🌸</p>
@@ -61,17 +61,17 @@ export default function RegistryPage() {
                 Prefer to give a general gift? We'll use it toward our new home, future adventures, or whatever life brings our way.
               </p>
               <div className="flex flex-col gap-3">
-                <p className="text-xs tracking-widest uppercase opacity-50">Send via Zelle</p>
+                <p className="text-xs tracking-widest uppercase opacity-50">Send via Zelle — use either:</p>
                 <div className="flex items-center gap-3">
-                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">
-                    riddhik2364@gmail.com
-                  </code>
-                  <button
-                    onClick={copyZelle}
-                    className="text-xs tracking-widest uppercase px-4 py-2 border transition-all"
-                    style={{ borderColor: '#c9a84c', color: '#c9a84c' }}
-                  >
-                    {copied ? 'Copied!' : 'Copy'}
+                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">riddhipatel2224@gmail.com</code>
+                  <button onClick={() => copy('riddhipatel2224@gmail.com', 'email2')} className="text-xs tracking-widest uppercase px-4 py-2 border transition-all flex-shrink-0" style={{ borderColor: '#c9a84c', color: '#c9a84c' }}>
+                    {copied === 'email2' ? 'Copied!' : 'Copy'}
+                  </button>
+                </div>
+                <div className="flex items-center gap-3">
+                  <code className="text-sm bg-amber-50 px-3 py-2 rounded flex-1">+1 (737) 274-2145</code>
+                  <button onClick={() => copy('+17372742145', 'phone2')} className="text-xs tracking-widest uppercase px-4 py-2 border transition-all flex-shrink-0" style={{ borderColor: '#c9a84c', color: '#c9a84c' }}>
+                    {copied === 'phone2' ? 'Copied!' : 'Copy'}
                   </button>
                 </div>
                 <p className="text-xs opacity-40">Add "Wedding Gift" in the memo</p>
