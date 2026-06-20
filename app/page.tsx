@@ -57,8 +57,8 @@ export default function Home() {
           <a href="/rsvp" className="px-10 py-3 tracking-widest uppercase text-sm text-white transition-opacity hover:opacity-80" style={{ background: '#c47090' }}>
             RSVP Now
           </a>
-          <a href="/events" className="px-10 py-3 tracking-widest uppercase text-sm border transition-opacity hover:opacity-60" style={{ borderColor: '#c47090', color: '#c47090' }}>
-            View Events
+          <a href="/registry" className="px-10 py-3 tracking-widest uppercase text-sm border transition-opacity hover:opacity-60" style={{ borderColor: '#c47090', color: '#c47090' }}>
+            Registry
           </a>
         </div>
 
@@ -83,43 +83,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Event preview strip */}
+      {/* Event strip */}
       <section className="grid grid-cols-1 md:grid-cols-3">
         {/* Haldi */}
-        <a href="/events#haldi" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
+        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
           style={{ background: 'linear-gradient(160deg, #fff8e0 0%, #fef0a0 100%)' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="/photos/haldi-decor.jpg" alt="Haldi" fill className="object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-500" />
+            <Image src="/photos/haldi-decor.jpg" alt="Haldi" fill className="object-cover opacity-50" />
           </div>
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-yellow-900 opacity-80">December 18 · 12 PM – 4 PM</p>
-          <h2 className="relative text-4xl text-yellow-900 mb-2">Haldi</h2>
-          <p className="relative text-sm text-yellow-900 opacity-70 leading-relaxed">Turmeric, laughter & blessings. A bright afternoon celebration with family.</p>
-          <span className="relative text-xs tracking-widest uppercase text-yellow-900 opacity-50 mt-4 group-hover:opacity-100 transition-opacity">Learn more →</span>
-        </a>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(120,80,0,0.6) 0%, transparent 60%)' }} />
+          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-yellow-100 opacity-90">December 18 · 12 PM – 4 PM</p>
+          <h2 className="relative text-4xl text-white mb-2">Haldi</h2>
+          <p className="relative text-sm text-yellow-100 opacity-80 leading-relaxed">Turmeric, laughter & blessings. A bright afternoon with family.</p>
+        </div>
 
         {/* Sangeet */}
-        <a href="/events#sangeet" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
-          style={{ background: 'linear-gradient(160deg, #f9e8f5 0%, #f0c8e8 100%)' }}>
+        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
+          style={{ background: '#1a0012' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="/photos/sangeet-night.jpg" alt="Sangeet" fill className="object-cover opacity-60 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500" />
+            <Image src="/photos/sangeet-night.jpg" alt="Sangeet" fill className="object-cover opacity-70" />
           </div>
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-80" style={{ color: '#8b3070' }}>December 18 · 7 PM Onwards</p>
-          <h2 className="relative text-4xl mb-2" style={{ color: '#6b1f50' }}>Sangeet</h2>
-          <p className="relative text-sm opacity-70 leading-relaxed" style={{ color: '#6b1f50' }}>Cocktail night, dancing & music. The night the whole family performs.</p>
-          <span className="relative text-xs tracking-widest uppercase opacity-50 mt-4 group-hover:opacity-100 transition-opacity" style={{ color: '#8b3070' }}>Learn more →</span>
-        </a>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(80,0,50,0.7) 0%, transparent 60%)' }} />
+          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-pink-200 opacity-90">December 18 · 7 PM Onwards</p>
+          <h2 className="relative text-4xl text-white mb-2">Sangeet</h2>
+          <p className="relative text-sm text-pink-100 opacity-80 leading-relaxed">Cocktail night, dancing & music. The night the whole family performs.</p>
+        </div>
 
         {/* Wedding */}
-        <a href="/events#wedding" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
-          style={{ background: 'linear-gradient(160deg, #fef0f5 0%, #fde0e8 100%)' }}>
+        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
+          style={{ background: '#1a0a00' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Wedding" fill className="object-cover opacity-40 group-hover:opacity-55 group-hover:scale-105 transition-all duration-500" />
+            <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Wedding" fill className="object-cover opacity-50" />
           </div>
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-80" style={{ color: '#8b3040' }}>December 19 · 3 PM Onwards</p>
-          <h2 className="relative text-4xl mb-2" style={{ color: '#6b1f30' }}>The Wedding</h2>
-          <p className="relative text-sm opacity-70 leading-relaxed" style={{ color: '#6b1f30' }}>The pheras, the vows, the moment we've all been waiting for.</p>
-          <span className="relative text-xs tracking-widest uppercase opacity-50 mt-4 group-hover:opacity-100 transition-opacity" style={{ color: '#8b3040' }}>Learn more →</span>
-        </a>
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(80,20,0,0.7) 0%, transparent 60%)' }} />
+          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-90" style={{ color: '#f5d98c' }}>December 19 · 3 PM Onwards</p>
+          <h2 className="relative text-4xl text-white mb-2">The Wedding</h2>
+          <p className="relative text-sm text-amber-100 opacity-80 leading-relaxed">The pheras, the vows, the moment we've all been waiting for.</p>
+        </div>
       </section>
 
       {/* Venue photo grid */}

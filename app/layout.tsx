@@ -16,7 +16,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </span>
           <div className="flex gap-6 text-sm tracking-widest uppercase">
             <a href="/" className="hover:opacity-60 transition-opacity">Home</a>
-            <a href="/events" className="hover:opacity-60 transition-opacity">Events</a>
             <a href="/rsvp" className="hover:opacity-60 transition-opacity">RSVP</a>
             <a href="/hotel" className="hover:opacity-60 transition-opacity">Hotel</a>
             <a href="/registry" className="hover:opacity-60 transition-opacity">Registry</a>
