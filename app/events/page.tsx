@@ -6,14 +6,17 @@ export default function EventsPage() {
 
       {/* Header */}
       <section
-        className="flex flex-col items-center justify-center py-24 px-6 text-center"
-        style={{ background: 'linear-gradient(160deg, #1a0a00 0%, #3d1a00 100%)' }}
+        className="relative flex flex-col items-center justify-center py-24 px-6 text-center overflow-hidden"
+        style={{ background: 'linear-gradient(160deg, #fff0f5 0%, #fde8f0 50%, #fef3e8 100%)' }}
       >
-        <p className="tracking-[0.4em] uppercase text-xs mb-4" style={{ color: '#c9a84c' }}>
+        <div className="absolute inset-0">
+          <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-2-3-1-scaled.jpg" alt="Resort" fill className="object-cover opacity-15" />
+        </div>
+        <p className="relative tracking-[0.4em] uppercase text-xs mb-4" style={{ color: '#c47090' }}>
           December 18 – 19, 2026
         </p>
-        <h1 className="text-5xl text-white mb-4 font-light">The Celebrations</h1>
-        <p className="text-white opacity-40 max-w-md text-sm leading-relaxed">
+        <h1 className="relative text-5xl mb-4 font-light" style={{ color: '#7a3050' }}>The Celebrations</h1>
+        <p className="relative max-w-md text-sm leading-relaxed opacity-60" style={{ color: '#7a3050' }}>
           Two days of rituals, music, dancing, and love at Champaner Heritage Resort, Halol, Gujarat.
         </p>
       </section>
@@ -136,7 +139,7 @@ export default function EventsPage() {
                   <span className="text-sm opacity-60" style={{ color: '#3d1a00' }}>Wedding Mandap, Champaner Heritage Resort</span>
                 </div>
                 <p className="text-base leading-8 mb-6 opacity-70" style={{ color: '#3d1a00' }}>
-                  The main event. Under an open mandap, surrounded by marigolds and family, we'll take our pheras around the sacred fire — the seven vows that bind two families into one.
+                  The main event. Under an open mandap, surrounded by marigolds and family, we'll take our pheras around the sacred fire — the seven vows that bind the Patel and Shah families into one.
                 </p>
                 <p className="text-base leading-8 mb-8 opacity-70" style={{ color: '#3d1a00' }}>
                   The evening flows into a grand reception dinner. Eat, celebrate, dance into the night. This is the moment we've all been waiting for.

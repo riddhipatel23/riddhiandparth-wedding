@@ -44,7 +44,7 @@ export default function HotelPage() {
           <div>
             <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Check-in</p>
             <p className="text-lg">Thursday, Dec 18</p>
-            <p className="text-xs opacity-40 mt-1">From 2:00 PM</p>
+            <p className="text-xs opacity-40 mt-1">From 11:00 AM</p>
           </div>
           <div>
             <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Check-out</p>
