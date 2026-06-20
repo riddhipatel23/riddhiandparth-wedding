@@ -142,7 +142,7 @@ export default function RSVPPage() {
                     Hotel Accommodation
                   </label>
                   <p className="text-sm mt-1 opacity-60">
-                    We've arranged rooms at ₹10,000/night. Check in the evening before, check out the day after.
+                    Champaner Heritage Resort — ₹10,000/night. Check-in Dec 18, check-out Dec 20. Transportation provided by us.
                   </p>
                 </div>
               </div>

@@ -38,11 +38,12 @@ export default function Home() {
       <div className="mt-20 grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl w-full text-center">
         <div>
           <p className="tracking-widest uppercase text-xs mb-1 opacity-50">Date</p>
-          <p className="text-lg">December 2026</p>
+          <p className="text-lg">December 19, 2026</p>
         </div>
         <div>
           <p className="tracking-widest uppercase text-xs mb-1 opacity-50">Venue</p>
-          <p className="text-lg">TBA</p>
+          <p className="text-lg">Champaner Heritage Resort</p>
+          <p className="text-xs opacity-40 mt-1">Halol, Gujarat</p>
         </div>
         <div>
           <p className="tracking-widest uppercase text-xs mb-1 opacity-50">Dress Code</p>
