@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function EventsPage() {
   return (
     <div className="flex flex-col">
@@ -51,15 +53,13 @@ export default function EventsPage() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-64 flex-shrink-0">
-                <div
-                  className="rounded-2xl flex flex-col items-center justify-center gap-4 py-16"
-                  style={{ background: 'linear-gradient(160deg, #f5a623, #f9d423)' }}
-                >
-                  <span className="text-7xl">💛</span>
-                  <span className="text-6xl">🌼</span>
-                  <span className="text-6xl">🌿</span>
-                  <p className="text-yellow-900 opacity-60 text-xs tracking-widest uppercase mt-2">Haldi · Mehndi · Blessings</p>
+              <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
+                <div className="relative rounded-2xl overflow-hidden h-48">
+                  <Image src="https://picsum.photos/seed/haldi1/500/400" alt="Haldi ceremony" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(245,166,35,0.25)' }} />
+                </div>
+                <div className="relative rounded-2xl overflow-hidden h-40">
+                  <Image src="https://picsum.photos/seed/flowers11/500/350" alt="Marigold flowers" fill className="object-cover" />
                 </div>
               </div>
             </div>
@@ -102,15 +102,14 @@ export default function EventsPage() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-64 flex-shrink-0">
-                <div
-                  className="rounded-2xl flex flex-col items-center justify-center gap-4 py-16"
-                  style={{ background: 'linear-gradient(160deg, #8b0050, #c0392b)' }}
-                >
-                  <span className="text-7xl">🎶</span>
-                  <span className="text-6xl">💃</span>
-                  <span className="text-6xl">🥂</span>
-                  <p className="text-pink-200 opacity-60 text-xs tracking-widest uppercase mt-2">Music · Dance · Cocktails</p>
+              <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
+                <div className="relative rounded-2xl overflow-hidden h-48">
+                  <Image src="https://picsum.photos/seed/dance55/500/400" alt="Sangeet dance" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,80,0.3)' }} />
+                </div>
+                <div className="relative rounded-2xl overflow-hidden h-40">
+                  <Image src="https://picsum.photos/seed/lights33/500/350" alt="Cocktail night lights" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(80,0,40,0.2)' }} />
                 </div>
               </div>
             </div>
@@ -153,15 +152,14 @@ export default function EventsPage() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-64 flex-shrink-0">
-                <div
-                  className="rounded-2xl flex flex-col items-center justify-center gap-4 py-16"
-                  style={{ background: 'linear-gradient(160deg, #8b0000, #c9a84c)' }}
-                >
-                  <span className="text-7xl">💍</span>
-                  <span className="text-6xl">🔥</span>
-                  <span className="text-6xl">🌺</span>
-                  <p className="text-amber-100 opacity-60 text-xs tracking-widest uppercase mt-2">Pheras · Vows · Reception</p>
+              <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
+                <div className="relative rounded-2xl overflow-hidden h-48">
+                  <Image src="https://picsum.photos/seed/wedding88/500/400" alt="Wedding ceremony" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,0,0.2)' }} />
+                </div>
+                <div className="relative rounded-2xl overflow-hidden h-40">
+                  <Image src="https://picsum.photos/seed/mandap66/500/350" alt="Mandap decor" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(201,168,76,0.15)' }} />
                 </div>
               </div>
             </div>

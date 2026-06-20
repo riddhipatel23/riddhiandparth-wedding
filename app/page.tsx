@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Home() {
   return (
     <div className="flex flex-col">
@@ -104,27 +106,23 @@ export default function Home() {
           Set against the UNESCO World Heritage Site of Champaner, Gujarat — a fort palace brought to life.
         </p>
 
-        {/* Photo grid — CSS mood collage */}
+        {/* Photo grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-5xl mx-auto mb-12">
-          <div className="col-span-2 row-span-2 rounded-xl flex items-center justify-center min-h-[280px] text-7xl"
-            style={{ background: 'linear-gradient(135deg, #c41e3a, #8b0000)' }}>
-            <span className="opacity-80">🕌</span>
+          <div className="col-span-2 row-span-2 relative rounded-xl overflow-hidden min-h-[280px]">
+            <Image src="https://picsum.photos/seed/palace1/800/600" alt="Venue" fill className="object-cover" />
+            <div className="absolute inset-0" style={{ background: 'rgba(61,26,0,0.2)' }} />
           </div>
-          <div className="rounded-xl flex items-center justify-center min-h-[135px] text-5xl"
-            style={{ background: 'linear-gradient(135deg, #f5a623, #f9d423)' }}>
-            <span className="opacity-80">🪔</span>
+          <div className="relative rounded-xl overflow-hidden min-h-[135px]">
+            <Image src="https://picsum.photos/seed/flowers22/400/300" alt="Flowers" fill className="object-cover" />
           </div>
-          <div className="rounded-xl flex items-center justify-center min-h-[135px] text-5xl"
-            style={{ background: 'linear-gradient(135deg, #6b1f6b, #c0392b)' }}>
-            <span className="opacity-80">🌺</span>
+          <div className="relative rounded-xl overflow-hidden min-h-[135px]">
+            <Image src="https://picsum.photos/seed/lights99/400/300" alt="Lights" fill className="object-cover" />
           </div>
-          <div className="rounded-xl flex items-center justify-center min-h-[135px] text-5xl"
-            style={{ background: 'linear-gradient(135deg, #1a6b1a, #2ecc71)' }}>
-            <span className="opacity-80">🌿</span>
+          <div className="relative rounded-xl overflow-hidden min-h-[135px]">
+            <Image src="https://picsum.photos/seed/garden44/400/300" alt="Garden" fill className="object-cover" />
           </div>
-          <div className="rounded-xl flex items-center justify-center min-h-[135px] text-5xl"
-            style={{ background: 'linear-gradient(135deg, #c9a84c, #f5d769)' }}>
-            <span className="opacity-80">✨</span>
+          <div className="relative rounded-xl overflow-hidden min-h-[135px]">
+            <Image src="https://picsum.photos/seed/arch77/400/300" alt="Architecture" fill className="object-cover" />
           </div>
         </div>
 
