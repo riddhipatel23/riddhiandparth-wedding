@@ -85,7 +85,7 @@ export default function Home() {
         <a href="/events#sangeet" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
           style={{ background: 'linear-gradient(160deg, #f9e8f5 0%, #f0c8e8 100%)' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-7-1-scaled.jpg" alt="Sangeet" fill className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-500" />
+            <Image src="https://images.unsplash.com/photo-1619451683867-7yvuLz3D04w?w=800&q=80" alt="Sangeet" fill className="object-cover opacity-40 group-hover:opacity-55 group-hover:scale-105 transition-all duration-500" />
           </div>
           <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-80" style={{ color: '#8b3070' }}>December 18 · 7 PM Onwards</p>
           <h2 className="relative text-4xl mb-2" style={{ color: '#6b1f50' }}>Sangeet</h2>
@@ -97,7 +97,7 @@ export default function Home() {
         <a href="/events#wedding" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
           style={{ background: 'linear-gradient(160deg, #fef0f5 0%, #fde0e8 100%)' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-6-1-scaled.jpg" alt="Wedding" fill className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-500" />
+            <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Wedding" fill className="object-cover opacity-40 group-hover:opacity-55 group-hover:scale-105 transition-all duration-500" />
           </div>
           <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-80" style={{ color: '#8b3040' }}>December 19 · 3 PM Onwards</p>
           <h2 className="relative text-4xl mb-2" style={{ color: '#6b1f30' }}>The Wedding</h2>

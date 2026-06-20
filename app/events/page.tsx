@@ -58,11 +58,12 @@ export default function EventsPage() {
               </div>
               <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
                 <div className="relative rounded-2xl overflow-hidden h-48">
-                  <Image src="https://picsum.photos/seed/haldi1/500/400" alt="Haldi ceremony" fill className="object-cover" />
-                  <div className="absolute inset-0" style={{ background: 'rgba(245,166,35,0.25)' }} />
+                  <Image src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Haldi ceremony" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(245,166,35,0.15)' }} />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-40">
-                  <Image src="https://picsum.photos/seed/flowers11/500/350" alt="Marigold flowers" fill className="object-cover" />
+                  <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Marigold flowers" fill className="object-cover object-top" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(245,200,35,0.2)' }} />
                 </div>
               </div>
             </div>
@@ -107,12 +108,12 @@ export default function EventsPage() {
               </div>
               <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
                 <div className="relative rounded-2xl overflow-hidden h-48">
-                  <Image src="https://picsum.photos/seed/dance55/500/400" alt="Sangeet dance" fill className="object-cover" />
-                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,80,0.3)' }} />
+                  <Image src="https://images.unsplash.com/photo-1619451683867-7yvuLz3D04w?w=600&q=80" alt="Sangeet dance" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,80,0.2)' }} />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-40">
-                  <Image src="https://picsum.photos/seed/lights33/500/350" alt="Cocktail night lights" fill className="object-cover" />
-                  <div className="absolute inset-0" style={{ background: 'rgba(80,0,40,0.2)' }} />
+                  <Image src="https://images.unsplash.com/photo-1594938298603-c8148c4b984b?w=600&q=80" alt="Cocktail night" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(80,0,40,0.15)' }} />
                 </div>
               </div>
             </div>
@@ -157,12 +158,12 @@ export default function EventsPage() {
               </div>
               <div className="w-full md:w-64 flex-shrink-0 flex flex-col gap-2">
                 <div className="relative rounded-2xl overflow-hidden h-48">
-                  <Image src="https://picsum.photos/seed/wedding88/500/400" alt="Wedding ceremony" fill className="object-cover" />
-                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,0,0.2)' }} />
+                  <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Wedding ceremony" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(139,0,0,0.15)' }} />
                 </div>
                 <div className="relative rounded-2xl overflow-hidden h-40">
-                  <Image src="https://picsum.photos/seed/mandap66/500/350" alt="Mandap decor" fill className="object-cover" />
-                  <div className="absolute inset-0" style={{ background: 'rgba(201,168,76,0.15)' }} />
+                  <Image src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&q=80" alt="Mandap decor" fill className="object-cover" />
+                  <div className="absolute inset-0" style={{ background: 'rgba(201,168,76,0.1)' }} />
                 </div>
               </div>
             </div>
