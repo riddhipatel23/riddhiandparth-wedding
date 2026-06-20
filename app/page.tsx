@@ -67,13 +67,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Couple photo strip */}
+      <section className="grid grid-cols-2 h-[60vh]">
+        <div className="relative overflow-hidden group">
+          <Image src="/photos/couple-rome.jpg" alt="Riddhi & Parth in Rome" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(122,48,80,0.5) 0%, transparent 60%)' }} />
+          <p className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase opacity-80">Rome, Italy</p>
+        </div>
+        <div className="relative overflow-hidden group">
+          <Image src="/photos/dog-of-honour.jpg" alt="Dog of Honour" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(122,48,80,0.5) 0%, transparent 60%)' }} />
+          <div className="absolute bottom-6 left-6">
+            <p className="text-white text-sm tracking-widest uppercase opacity-80">🐾 Dog of Honour</p>
+          </div>
+        </div>
+      </section>
+
       {/* Event preview strip */}
       <section className="grid grid-cols-1 md:grid-cols-3">
         {/* Haldi */}
         <a href="/events#haldi" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
           style={{ background: 'linear-gradient(160deg, #fff8e0 0%, #fef0a0 100%)' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-5-1-scaled.jpg" alt="Haldi" fill className="object-cover opacity-30 group-hover:opacity-40 group-hover:scale-105 transition-all duration-500" />
+            <Image src="/photos/haldi-decor.jpg" alt="Haldi" fill className="object-cover opacity-50 group-hover:opacity-65 group-hover:scale-105 transition-all duration-500" />
           </div>
           <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-yellow-900 opacity-80">December 18 · 12 PM – 4 PM</p>
           <h2 className="relative text-4xl text-yellow-900 mb-2">Haldi</h2>
@@ -85,7 +101,7 @@ export default function Home() {
         <a href="/events#sangeet" className="group relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden transition-all duration-300"
           style={{ background: 'linear-gradient(160deg, #f9e8f5 0%, #f0c8e8 100%)' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1619451683867-7yvuLz3D04w?w=800&q=80" alt="Sangeet" fill className="object-cover opacity-40 group-hover:opacity-55 group-hover:scale-105 transition-all duration-500" />
+            <Image src="/photos/sangeet-night.jpg" alt="Sangeet" fill className="object-cover opacity-60 group-hover:opacity-75 group-hover:scale-105 transition-all duration-500" />
           </div>
           <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-80" style={{ color: '#8b3070' }}>December 18 · 7 PM Onwards</p>
           <h2 className="relative text-4xl mb-2" style={{ color: '#6b1f50' }}>Sangeet</h2>
