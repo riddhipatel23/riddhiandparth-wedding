@@ -28,7 +28,7 @@ export default function Home() {
         </div>
 
         <div className="absolute top-8 left-0 right-0 flex justify-center gap-3 text-xl opacity-50 select-none">
-          {'🌸🌼🌸🌼🌸🌼🌸🌼🌸'.split('').map((c, i) => <span key={i}>{c}</span>)}
+          {Array.from('🌸🌼🌸🌼🌸🌼🌸🌼🌸').map((c, i) => <span key={i}>{c}</span>)}
         </div>
 
         <p className="relative tracking-[0.4em] uppercase text-xs mb-8" style={{ color: '#b06080' }}>
@@ -63,7 +63,7 @@ export default function Home() {
         </div>
 
         <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 text-xl opacity-50 select-none">
-          {'🌼🌸🌼🌸🌼🌸🌼🌸🌼'.split('').map((c, i) => <span key={i}>{c}</span>)}
+          {Array.from('🌼🌸🌼🌸🌼🌸🌼🌸🌼').map((c, i) => <span key={i}>{c}</span>)}
         </div>
       </section>
 
