@@ -59,7 +59,6 @@ export default function HotelPage() {
           <ul className="text-sm space-y-2 opacity-70">
             <li>✓ Daily breakfast</li>
             <li>✓ Transportation to & from the resort (provided by us)</li>
-            <li>✓ Access to all wedding events on-site</li>
           </ul>
         </div>
       </div>

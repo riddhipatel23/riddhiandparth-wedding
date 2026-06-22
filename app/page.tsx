@@ -67,21 +67,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Couple photo strip */}
-      <section className="grid grid-cols-2 h-[60vh]">
-        <div className="relative overflow-hidden group">
-          <Image src="/photos/couple-rome.jpg" alt="Riddhi & Parth in Rome" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(122,48,80,0.5) 0%, transparent 60%)' }} />
-          <p className="absolute bottom-6 left-6 text-white text-sm tracking-widest uppercase opacity-80">Rome, Italy</p>
-        </div>
-        <div className="relative overflow-hidden group">
-          <Image src="/photos/dog-of-honour.jpg" alt="Dog of Honour" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" />
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(122,48,80,0.5) 0%, transparent 60%)' }} />
-          <div className="absolute bottom-6 left-6">
-            <p className="text-white text-sm tracking-widest uppercase opacity-80">🐾 Dog of Honour</p>
-          </div>
-        </div>
-      </section>
 
       {/* Event strip */}
       <section className="grid grid-cols-1 md:grid-cols-3">
@@ -113,7 +98,7 @@ export default function Home() {
         <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
           style={{ background: '#1a0a00' }}>
           <div className="absolute inset-0 overflow-hidden">
-            <Image src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=800&q=80" alt="Wedding" fill className="object-cover opacity-50" />
+            <Image src="/photos/PYE_3523.jpg" alt="Wedding" fill className="object-cover opacity-60" />
           </div>
           <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(80,20,0,0.7) 0%, transparent 60%)' }} />
           <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-90" style={{ color: '#f5d98c' }}>December 19 · 3 PM Onwards</p>
@@ -135,16 +120,16 @@ export default function Home() {
             <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-2-4-1-scaled.jpg" alt="Champaner Heritage Resort" fill className="object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2025/06/Heritage-Rooms.png" alt="Heritage Rooms" fill className="object-cover" />
+            <Image src="/photos/PYE_3523.jpg" alt="Wedding ceremony" fill className="object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-2-3-1-scaled.jpg" alt="Wedding decor" fill className="object-cover" />
+            <Image src="/photos/cover.jpg" alt="Wedding ritual" fill className="object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/10/Royal-Dining-Cuisine-Experience-1.jpg" alt="Royal Dining" fill className="object-cover" />
+            <Image src="/photos/wedding-ritual.webp" alt="Wedding ceremony" fill className="object-cover" />
           </div>
           <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2025/06/Suite-Rooms.png" alt="Suite Rooms" fill className="object-cover" />
+            <Image src="/photos/haldi-decor.jpg" alt="Haldi decor" fill className="object-cover" />
           </div>
         </div>
 
