@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col">
+      <body suppressHydrationWarning className="min-h-screen flex flex-col">
         <nav className="flex items-center justify-between px-8 py-4 border-b border-amber-200">
           <span className="text-lg tracking-widest uppercase" style={{ color: '#c47090' }}>
             Riddhi &amp; Parth
