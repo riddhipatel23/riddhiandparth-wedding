@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col">
       {/* ── Photo ─────────────────────────────────────────────────────────── */}
       <section className="relative w-full" style={{ height: "calc(100vh - 120px)", minHeight: 500 }}>
-        <Image src="/photos/hero.jpeg" alt="Riddhi and Parth" fill className="object-cover object-center" priority />
+        <Image src="/photos/hero.jpg" alt="Riddhi and Parth" fill className="object-cover object-[50%_85%]" priority />
       </section>
 
 
