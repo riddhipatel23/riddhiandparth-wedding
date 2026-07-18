@@ -1,121 +1,129 @@
 export default function HotelPage() {
   return (
-    <div className="max-w-2xl mx-auto px-6 py-16">
-      <p className="tracking-widest uppercase text-xs mb-3 text-center" style={{ color: '#c9a84c' }}>
-        Accommodation
-      </p>
-      <h1 className="text-4xl text-center mb-4">Hotel & Stay</h1>
-      <p className="text-center opacity-60 mb-2 max-w-lg mx-auto">
-        We've reserved rooms at the venue itself for out-of-town guests. Stay where the celebration happens.
-      </p>
-      <p className="text-center text-sm opacity-40 mb-12">December 18 – 20, 2026</p>
+    <div className="flex flex-col">
 
-      {/* Venue card */}
-      <div className="border border-amber-200 rounded-lg p-8 mb-6">
-        <div className="flex items-start justify-between gap-4 mb-6">
-          <div>
-            <h2 className="text-2xl mb-1">Champaner Heritage Resort</h2>
-            <p className="opacity-50 text-sm">Halol, Gujarat, India</p>
-          </div>
-          <span className="text-2xl">🏰</span>
-        </div>
-
-        {/* Pricing */}
-        <div className="grid grid-cols-3 gap-4 mb-8">
-          <div className="bg-amber-50 rounded-lg p-4 text-center">
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-2">Per Night</p>
-            <p className="text-2xl font-light">₹10,000</p>
-            <p className="text-xs opacity-40 mt-1">per room</p>
-          </div>
-          <div className="bg-amber-50 rounded-lg p-4 text-center">
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-2">2 Nights</p>
-            <p className="text-2xl font-light">₹20,000</p>
-            <p className="text-xs opacity-40 mt-1">recommended</p>
-          </div>
-          <div className="bg-amber-50 rounded-lg p-4 text-center">
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-2">1 Night</p>
-            <p className="text-2xl font-light">₹10,000</p>
-            <p className="text-xs opacity-40 mt-1">wedding night only</p>
-          </div>
-        </div>
-
-        {/* Dates */}
-        <div className="grid grid-cols-2 gap-6 mb-8">
-          <div>
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Check-in</p>
-            <p className="text-lg">Thursday, Dec 18</p>
-            <p className="text-xs opacity-40 mt-1">From 11:00 AM</p>
-          </div>
-          <div>
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Check-out</p>
-            <p className="text-lg">Saturday, Dec 20</p>
-            <p className="text-xs opacity-40 mt-1">By 11:00 AM</p>
-          </div>
-        </div>
-
-        {/* Included */}
-        <div className="border-t border-amber-100 pt-6">
-          <p className="text-xs tracking-widest uppercase opacity-50 mb-3">Included with Your Stay</p>
-          <ul className="text-sm space-y-2 opacity-70">
-            <li>✓ Daily breakfast</li>
-            <li>✓ Transportation to & from the resort (provided by us)</li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Getting There — USA guests */}
-      <div className="border border-amber-200 rounded-lg p-8 mb-6">
-        <h3 className="text-lg mb-4 flex items-center gap-2">
-          <span>✈️</span> Getting Here from the USA
-        </h3>
-        <p className="text-sm opacity-60 mb-5 leading-relaxed">
-          Fly into either of these international airports — both are well-connected from major US hubs (NYC, Chicago, LA, SFO) with one stop.
+      {/* Header */}
+      <section className="px-6 pt-20 pb-14 text-center bg-white border-b border-[var(--line)]">
+        <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Accommodation & Travel</p>
+        <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">Travel & Stay</h1>
+        <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
+          We've reserved rooms at the venue for out-of-town guests. Stay where the celebration happens.
         </p>
-        <div className="grid grid-cols-2 gap-4 mb-5">
-          <div className="bg-amber-50 rounded-lg p-4">
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Option 1</p>
-            <p className="font-semibold">AMD</p>
-            <p className="text-sm opacity-70">Ahmedabad Airport</p>
-            <p className="text-xs opacity-50 mt-2">~1.5 hr drive to venue</p>
-          </div>
-          <div className="bg-amber-50 rounded-lg p-4">
-            <p className="text-xs tracking-widest uppercase opacity-50 mb-1">Option 2</p>
-            <p className="font-semibold">BDQ</p>
-            <p className="text-sm opacity-70">Vadodara (Baroda) Airport</p>
-            <p className="text-xs opacity-50 mt-2">~1 hr drive to venue</p>
-          </div>
-        </div>
-        <div className="bg-green-50 border border-green-200 rounded-lg px-4 py-3 text-sm">
-          <span className="font-semibold">🚌 We've got you covered.</span>{' '}
-          <span className="opacity-70">We're arranging pickup and drop-off from both airports. Let us know your flight details when you contact us.</span>
-        </div>
-      </div>
+        <p className="mt-3 text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] opacity-60">
+          December 18 – 20, 2026
+        </p>
+      </section>
 
-      {/* Contact to Book */}
-      <div className="border border-amber-300 rounded-lg p-8 text-center" style={{ background: '#fffbf3' }}>
-        <h3 className="text-xl mb-2">Need Help Booking?</h3>
-        <p className="text-sm opacity-60 mb-6 max-w-sm mx-auto leading-relaxed">
-          Rooms are limited. Reach out to us directly and we'll help you secure your room, coordinate airport pickup, and answer any questions.
-        </p>
-        <div className="flex flex-col sm:flex-row gap-3 justify-center">
-          <a
-            href="mailto:riddhik2364@gmail.com?subject=Wedding Hotel Booking"
-            className="px-8 py-3 tracking-widest uppercase text-sm text-white transition-opacity hover:opacity-80"
-            style={{ background: '#c9a84c' }}
-          >
-            Email Us
-          </a>
-          <a
-            href="/rsvp"
-            className="px-8 py-3 tracking-widest uppercase text-sm border transition-opacity hover:opacity-60"
-            style={{ borderColor: '#c9a84c', color: '#c9a84c' }}
-          >
-            RSVP & Note Interest
-          </a>
+      <div className="max-w-2xl mx-auto w-full px-6 py-16 flex flex-col gap-6">
+
+        {/* Venue card */}
+        <div className="border border-[var(--line)] bg-white">
+          <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
+            <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">The Venue</p>
+            <h2 className="text-2xl [font-family:var(--font-display)]">Champaner Heritage Resort</h2>
+            <p className="text-sm text-[var(--muted)] mt-1">Halol, Gujarat, India</p>
+          </div>
+
+          <div className="grid grid-cols-3 divide-x divide-[var(--line)] border-b border-[var(--line)]">
+            {[
+              { label: 'Per Night', value: '₹10,000', sub: 'per room' },
+              { label: '2 Nights', value: '₹20,000', sub: 'recommended' },
+              { label: '1 Night', value: '₹10,000', sub: 'wedding only' },
+            ].map(({ label, value, sub }) => (
+              <div key={label} className="p-5 text-center">
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[var(--muted)] mb-2">{label}</p>
+                <p className="text-xl font-light [font-family:var(--font-display)]">{value}</p>
+                <p className="text-[10px] text-[var(--muted)] mt-1">{sub}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-2 divide-x divide-[var(--line)] border-b border-[var(--line)]">
+            <div className="p-6">
+              <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] mb-2">Check-in</p>
+              <p className="text-base [font-family:var(--font-display)]">Thursday, Dec 18</p>
+              <p className="text-xs text-[var(--muted)] mt-1">From 11:00 AM</p>
+            </div>
+            <div className="p-6">
+              <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] mb-2">Check-out</p>
+              <p className="text-base [font-family:var(--font-display)]">Saturday, Dec 20</p>
+              <p className="text-xs text-[var(--muted)] mt-1">By 11:00 AM</p>
+            </div>
+          </div>
+
+          <div className="px-8 py-6">
+            <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] mb-4">Included with your stay</p>
+            <ul className="flex flex-col gap-2 text-sm text-[var(--muted)]">
+              <li className="flex items-center gap-3">
+                <span className="h-px w-4 bg-[var(--line)] flex-shrink-0" />
+                Daily breakfast
+              </li>
+              <li className="flex items-center gap-3">
+                <span className="h-px w-4 bg-[var(--line)] flex-shrink-0" />
+                Transportation to & from the resort, arranged by us
+              </li>
+            </ul>
+          </div>
         </div>
-        <p className="text-xs opacity-40 mt-5">
-          Include your arrival date, number of guests, and which airport you're flying into.
-        </p>
+
+        {/* Getting here */}
+        <div className="border border-[var(--line)] bg-white">
+          <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
+            <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">Getting Here</p>
+            <h2 className="text-2xl [font-family:var(--font-display)]">Flying in from the USA</h2>
+            <p className="text-sm text-[var(--muted)] mt-3 leading-7">
+              Both airports below have direct connections from major US hubs — New York, Chicago, LA, and SFO — with a single stop.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 divide-x divide-[var(--line)] border-b border-[var(--line)]">
+            {[
+              { code: 'AMD', name: 'Ahmedabad Airport', drive: '~1.5 hr drive to venue' },
+              { code: 'BDQ', name: 'Vadodara (Baroda) Airport', drive: '~1 hr drive to venue' },
+            ].map(({ code, name, drive }) => (
+              <div key={code} className="p-6">
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[var(--muted)] mb-2">Option</p>
+                <p className="text-2xl font-light [font-family:var(--font-display)]">{code}</p>
+                <p className="text-sm text-[var(--muted)] mt-1">{name}</p>
+                <p className="text-xs text-[var(--muted)] mt-3 opacity-70">{drive}</p>
+              </div>
+            ))}
+          </div>
+
+          <div className="px-8 py-5">
+            <p className="text-sm text-[var(--muted)] leading-7">
+              <span className="text-[var(--foreground)] font-medium">We have you covered.</span>{' '}
+              Pickup and drop-off from both airports is arranged by us. Share your flight details when you RSVP or reach out.
+            </p>
+          </div>
+        </div>
+
+        {/* Contact */}
+        <div className="border border-[var(--line)] bg-[var(--surface)] px-8 py-10 text-center">
+          <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-4">Need Help Booking?</p>
+          <h3 className="text-3xl [font-family:var(--font-script)] mb-3">Get in Touch</h3>
+          <p className="text-sm text-[var(--muted)] max-w-sm mx-auto mb-8 leading-7">
+            Rooms are limited. Reach out directly and we'll help secure your room, coordinate airport pickup, and answer any questions.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center">
+            <a
+              href="mailto:riddhik2364@gmail.com?subject=Wedding Hotel Booking"
+              className="border border-[var(--foreground)] bg-[var(--foreground)] px-8 py-3 text-[10px] tracking-[0.25em] uppercase text-white transition-opacity hover:opacity-75"
+            >
+              Email Us
+            </a>
+            <a
+              href="/rsvp"
+              className="border border-[var(--foreground)] px-8 py-3 text-[10px] tracking-[0.25em] uppercase transition-opacity hover:opacity-60"
+            >
+              RSVP & Note Interest
+            </a>
+          </div>
+          <p className="text-[10px] text-[var(--muted)] mt-6 opacity-60">
+            Include your arrival date, number of guests, and which airport you're flying into.
+          </p>
+        </div>
+
       </div>
     </div>
   )
