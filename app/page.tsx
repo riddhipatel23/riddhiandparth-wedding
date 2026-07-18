@@ -1,146 +1,79 @@
-import Image from 'next/image'
+import Image from "next/image";
+import { BrushStroke } from "./components/BrushStroke";
+
 
 export default function Home() {
   return (
     <div className="flex flex-col">
-
-      {/* Hero */}
-      <section
-        className="relative flex flex-col items-center justify-center min-h-[92vh] text-center px-6 overflow-hidden"
-        style={{ background: 'linear-gradient(160deg, #fff0f5 0%, #fde8f0 35%, #fef3e8 70%, #fdf5ff 100%)' }}
-      >
-        {/* Soft background image */}
-        <div className="absolute inset-0 overflow-hidden">
-          <Image
-            src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-2-4-1-scaled.jpg"
-            alt="Champaner Heritage Resort"
-            fill
-            className="object-cover opacity-10"
-            priority
-          />
-        </div>
-
-        {/* Decorative rings */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
-          <div className="w-[600px] h-[600px] rounded-full border opacity-20" style={{ borderColor: '#e8a0b8' }} />
-          <div className="absolute w-[420px] h-[420px] rounded-full border opacity-30" style={{ borderColor: '#e8a0b8' }} />
-          <div className="absolute w-[260px] h-[260px] rounded-full border opacity-40" style={{ borderColor: '#e8a0b8' }} />
-        </div>
-
-        <div className="absolute top-8 left-0 right-0 flex justify-center gap-3 text-xl opacity-50 select-none">
-          {Array.from('🌸🌼🌸🌼🌸🌼🌸🌼🌸').map((c, i) => <span key={i}>{c}</span>)}
-        </div>
-
-        <p className="relative tracking-[0.4em] uppercase text-xs mb-8" style={{ color: '#b06080' }}>
-          Together with their families
-        </p>
-
-        <h1 className="relative text-7xl md:text-9xl font-light mb-3" style={{ color: '#7a3050', fontFamily: 'Georgia, serif' }}>
-          Riddhi
-        </h1>
-        <div className="relative text-3xl my-2" style={{ color: '#d4a0b0' }}>❋</div>
-        <h1 className="relative text-7xl md:text-9xl font-light mb-10" style={{ color: '#7a3050', fontFamily: 'Georgia, serif' }}>
-          Parth
-        </h1>
-
-        <p className="relative tracking-widest uppercase text-xs mb-3 opacity-50" style={{ color: '#7a3050' }}>
-          Request the honour of your presence
-        </p>
-        <p className="relative text-2xl mb-4 font-light" style={{ color: '#c9a84c' }}>
-          December 18 – 19, 2026
-        </p>
-        <p className="relative text-sm mb-10 tracking-wider opacity-60" style={{ color: '#7a3050' }}>
-          Champaner Heritage Resort · Halol, Gujarat
-        </p>
-
-        <div className="relative flex flex-col sm:flex-row gap-4">
-          <a href="/rsvp" className="px-10 py-3 tracking-widest uppercase text-sm text-white transition-opacity hover:opacity-80" style={{ background: '#c47090' }}>
-            RSVP Now
-          </a>
-          <a href="/registry" className="px-10 py-3 tracking-widest uppercase text-sm border transition-opacity hover:opacity-60" style={{ borderColor: '#c47090', color: '#c47090' }}>
-            Registry
-          </a>
-        </div>
-
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-3 text-xl opacity-50 select-none">
-          {Array.from('🌼🌸🌼🌸🌼🌸🌼🌸🌼').map((c, i) => <span key={i}>{c}</span>)}
-        </div>
+      {/* ── Photo ─────────────────────────────────────────────────────────── */}
+      <section className="relative w-full" style={{ height: "calc(100vh - 120px)", minHeight: 500 }}>
+        <Image src="/photos/hero.jpeg" alt="Riddhi and Parth" fill className="object-cover object-center" priority />
       </section>
 
 
-      {/* Event strip */}
-      <section className="grid grid-cols-1 md:grid-cols-3">
-        {/* Haldi */}
-        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
-          style={{ background: 'linear-gradient(160deg, #fff8e0 0%, #fef0a0 100%)' }}>
-          <div className="absolute inset-0 overflow-hidden">
-            <Image src="/photos/haldi-decor.jpg" alt="Haldi" fill className="object-cover opacity-50" />
+      {/* ── Our Story ─────────────────────────────────────────────────────── */}
+      <section className="px-6 py-24 bg-[var(--surface)]">
+        <div className="max-w-2xl mx-auto">
+          <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-center text-[var(--muted)]">How it began</p>
+          <h2 className="text-6xl md:text-7xl text-center mb-2 [font-family:var(--font-script)]">Our Story</h2>
+          <div className="flex justify-center mb-14">
+            <BrushStroke variant="underline" className="w-48" color="#b09a78" delay={100} duration={1200} />
           </div>
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(120,80,0,0.6) 0%, transparent 60%)' }} />
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-yellow-100 opacity-90">December 18 · 12 PM – 4 PM</p>
-          <h2 className="relative text-4xl text-white mb-2">Haldi</h2>
-          <p className="relative text-sm text-yellow-100 opacity-80 leading-relaxed">Turmeric, laughter & blessings. A bright afternoon with family.</p>
-        </div>
 
-        {/* Sangeet */}
-        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
-          style={{ background: '#1a0012' }}>
-          <div className="absolute inset-0 overflow-hidden">
-            <Image src="/photos/sangeet-night.jpg" alt="Sangeet" fill className="object-cover opacity-70" />
-          </div>
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(80,0,50,0.7) 0%, transparent 60%)' }} />
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 text-pink-200 opacity-90">December 18 · 7 PM Onwards</p>
-          <h2 className="relative text-4xl text-white mb-2">Sangeet</h2>
-          <p className="relative text-sm text-pink-100 opacity-80 leading-relaxed">Cocktail night, dancing & music. The night the whole family performs.</p>
-        </div>
+          <p className="text-lg leading-9 mb-6 [font-family:var(--font-display)]">
+            It started with a conversation neither of them expected to remember — a mutual friend's Diwali party, Parth cracking a terrible joke, Riddhi laughing anyway. That was the beginning.
+          </p>
+          <p className="text-base leading-8 mb-6 text-[var(--muted)]">
+            Over the next two years they built something out of long drives, shared playlists, and the kind of easy silence that only comes when you've found your person. They cooked bad pasta in a
+            tiny apartment kitchen. They got hopelessly lost on a road trip and didn't mind at all.
+          </p>
+          <p className="text-base leading-8 text-[var(--muted)]">When Parth finally asked — on a quiet evening in Rome, the city glowing gold around them — the answer was never in doubt.</p>
 
-        {/* Wedding */}
-        <div className="relative flex flex-col justify-end p-10 min-h-[380px] overflow-hidden"
-          style={{ background: '#1a0a00' }}>
-          <div className="absolute inset-0 overflow-hidden">
-            <Image src="/photos/PYE_3523.jpg" alt="Wedding" fill className="object-cover opacity-60" />
+          <div className="mt-12 flex items-center gap-5">
+            <div className="flex-1 h-px bg-[var(--line)]" />
+            <a href="/story" className="text-[10px] tracking-[0.3em] uppercase text-[var(--muted)] hover:text-[var(--foreground)] transition-colors flex-shrink-0">
+              Continue Reading →
+            </a>
+            <div className="flex-1 h-px bg-[var(--line)]" />
           </div>
-          <div className="absolute inset-0" style={{ background: 'linear-gradient(to top, rgba(80,20,0,0.7) 0%, transparent 60%)' }} />
-          <p className="relative text-xs tracking-[0.3em] uppercase mb-2 opacity-90" style={{ color: '#f5d98c' }}>December 19 · 3 PM Onwards</p>
-          <h2 className="relative text-4xl text-white mb-2">The Wedding</h2>
-          <p className="relative text-sm text-amber-100 opacity-80 leading-relaxed">The pheras, the vows, the moment we've all been waiting for.</p>
         </div>
       </section>
 
-      {/* Venue photo grid */}
-      <section className="px-6 py-20 text-center" style={{ background: '#fff8fb' }}>
-        <p className="tracking-widest uppercase text-xs mb-3" style={{ color: '#c47090' }}>The Venue</p>
-        <h2 className="text-4xl mb-4" style={{ color: '#7a3050' }}>Champaner Heritage Resort</h2>
-        <p className="text-sm mb-12 max-w-md mx-auto opacity-60" style={{ color: '#7a3050' }}>
-          Set against the UNESCO World Heritage Site of Champaner, Gujarat — a fort palace brought to life.
+      {/* ── Celebration CTA ───────────────────────────────────────────────── */}
+      <section className="relative bg-[var(--surface)] px-6 py-32 flex flex-col items-center text-center overflow-hidden">
+        <div className="absolute inset-x-0 top-1/2 -translate-y-1/2 flex items-center justify-center pointer-events-none opacity-40">
+          <BrushStroke variant="divider" className="w-full max-w-3xl" color="#b09a78" delay={200} duration={1800} />
+        </div>
+
+        <p className="relative text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-6">
+          December 18 – 19, 2026 · Halol, Gujarat
         </p>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 max-w-5xl mx-auto mb-8">
-          <div className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden min-h-[300px]">
-            <Image src="https://champanerheritageresort.com/wp-content/uploads/2024/08/image-6-2-4-1-scaled.jpg" alt="Champaner Heritage Resort" fill className="object-cover" />
-          </div>
-          <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="/photos/PYE_3523.jpg" alt="Wedding ceremony" fill className="object-cover" />
-          </div>
-          <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="/photos/cover.jpg" alt="Wedding ritual" fill className="object-cover" />
-          </div>
-          <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="/photos/wedding-ritual.webp" alt="Wedding ceremony" fill className="object-cover" />
-          </div>
-          <div className="relative rounded-2xl overflow-hidden min-h-[145px]">
-            <Image src="/photos/haldi-decor.jpg" alt="Haldi decor" fill className="object-cover" />
-          </div>
+        <h2 className="relative text-5xl md:text-6xl mb-3 [font-family:var(--font-script)]">
+          The Celebrations
+        </h2>
+        <div className="relative flex justify-center mb-8">
+          <BrushStroke variant="underline" className="w-40" color="#b09a78" delay={300} duration={1200} />
         </div>
-
-        <p className="text-xs tracking-widest uppercase opacity-30" style={{ color: '#7a3050' }}>Halol · Gujarat · India</p>
+        <p className="relative text-sm text-[var(--muted)] max-w-sm mb-12 leading-7">
+          Haldi, Sangeet, and the Wedding — two days of rituals, music, and dancing at Champaner Heritage Resort.
+        </p>
+        <a
+          href="/events"
+          className="relative group inline-flex items-center gap-3 border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white"
+        >
+          Take me to the celebration
+          <span className="transition-transform group-hover:translate-x-1">→</span>
+        </a>
       </section>
 
-      {/* CTA */}
-      <section className="text-center py-16 px-6" style={{ background: 'linear-gradient(160deg, #fde8f0 0%, #f5e0f8 100%)' }}>
-        <p className="tracking-widest uppercase text-xs mb-4 opacity-50" style={{ color: '#7a3050' }}>We can't wait to celebrate with you</p>
-        <h2 className="text-4xl mb-8 font-light" style={{ color: '#7a3050' }}>Will you join us?</h2>
-        <a href="/rsvp" className="inline-block px-12 py-4 tracking-widest uppercase text-sm text-white transition-opacity hover:opacity-80" style={{ background: '#c47090' }}>
+      {/* ── RSVP CTA ──────────────────────────────────────────────────────── */}
+      <section className="text-center py-24 px-6 bg-white">
+        <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">Kindly reply by November 1, 2026</p>
+        <h2 className="text-5xl md:text-6xl mb-2 [font-family:var(--font-script)]">Will You Join Us?</h2>
+        <div className="flex justify-center mb-10">
+          <BrushStroke variant="underline" className="w-44" color="#b09a78" delay={100} duration={1200} />
+        </div>
+        <a href="/rsvp" className="inline-block border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white">
           RSVP Now
         </a>
       </section>
