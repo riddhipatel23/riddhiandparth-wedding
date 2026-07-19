@@ -1,23 +1,27 @@
+import { Reveal } from '../components/Reveal'
+
 export default function HotelPage() {
   return (
     <div className="flex flex-col">
 
       {/* Header */}
       <section className="px-6 pt-20 pb-14 text-center bg-white border-b border-[var(--line)]">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Accommodation & Travel</p>
-        <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">Travel & Stay</h1>
-        <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
-          We've reserved rooms at the venue for out-of-town guests. Stay where the celebration happens.
-        </p>
-        <p className="mt-3 text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] opacity-60">
-          December 18 – 20, 2026
-        </p>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Accommodation & Travel</p>
+          <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">Travel & Stay</h1>
+          <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
+            We've reserved rooms at the venue for out-of-town guests. Stay where the celebration happens.
+          </p>
+          <p className="mt-3 text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] opacity-60">
+            December 18 – 20, 2026
+          </p>
+        </Reveal>
       </section>
 
       <div className="max-w-2xl mx-auto w-full px-6 py-16 flex flex-col gap-6">
 
         {/* Venue card */}
-        <div className="border border-[var(--line)] bg-white">
+        <Reveal className="border border-[var(--line)] bg-white">
           <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">The Venue</p>
             <h2 className="text-2xl [font-family:var(--font-display)]">Champaner Heritage Resort</h2>
@@ -64,10 +68,10 @@ export default function HotelPage() {
               </li>
             </ul>
           </div>
-        </div>
+        </Reveal>
 
         {/* Getting here */}
-        <div className="border border-[var(--line)] bg-white">
+        <Reveal className="border border-[var(--line)] bg-white">
           <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">Getting Here</p>
             <h2 className="text-2xl [font-family:var(--font-display)]">Flying in from the USA</h2>
@@ -96,10 +100,10 @@ export default function HotelPage() {
               Pickup and drop-off from both airports is arranged by us. Share your flight details when you RSVP or reach out.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Contact */}
-        <div className="border border-[var(--line)] bg-[var(--surface)] px-8 py-10 text-center">
+        <Reveal className="border border-[var(--line)] bg-[var(--surface)] px-8 py-10 text-center">
           <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-4">Need Help Booking?</p>
           <h3 className="text-3xl [font-family:var(--font-script)] mb-3">Get in Touch</h3>
           <p className="text-sm text-[var(--muted)] max-w-sm mx-auto mb-8 leading-7">
@@ -122,7 +126,7 @@ export default function HotelPage() {
           <p className="text-[10px] text-[var(--muted)] mt-6 opacity-60">
             Include your arrival date, number of guests, and which airport you're flying into.
           </p>
-        </div>
+        </Reveal>
 
       </div>
     </div>

@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { Reveal } from '../components/Reveal'
 
 export default function RegistryPage() {
   const [copied, setCopied] = useState<string | null>(null)
@@ -15,17 +16,19 @@ export default function RegistryPage() {
 
       {/* Header */}
       <section className="px-6 pt-20 pb-14 text-center bg-white border-b border-[var(--line)]">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Wedding Registry</p>
-        <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">Gifts & Registry</h1>
-        <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
-          Your presence is the greatest gift. If you'd like to celebrate us with something more, we've made it simple.
-        </p>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Wedding Registry</p>
+          <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">Gifts & Registry</h1>
+          <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
+            Your presence is the greatest gift. If you'd like to celebrate us with something more, we've made it simple.
+          </p>
+        </Reveal>
       </section>
 
       <div className="max-w-2xl mx-auto w-full px-6 py-16 flex flex-col gap-6">
 
         {/* Honeymoon Fund */}
-        <div className="border border-[var(--line)] bg-white">
+        <Reveal className="border border-[var(--line)] bg-white">
           <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">Contribution</p>
             <h2 className="text-2xl [font-family:var(--font-display)]">Honeymoon Fund</h2>
@@ -53,10 +56,10 @@ export default function RegistryPage() {
               Add "Honeymoon" in the memo so we know what it's for.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Cash Gift */}
-        <div className="border border-[var(--line)] bg-white">
+        <Reveal className="border border-[var(--line)] bg-white">
           <div className="px-8 pt-8 pb-6 border-b border-[var(--line)]">
             <p className="text-[10px] tracking-[0.35em] uppercase text-[var(--muted)] mb-2">Contribution</p>
             <h2 className="text-2xl [font-family:var(--font-display)]">Cash Gift</h2>
@@ -84,19 +87,21 @@ export default function RegistryPage() {
               Add "Wedding Gift" in the memo.
             </p>
           </div>
-        </div>
+        </Reveal>
 
         {/* Physical gifts */}
-        <div className="border border-[var(--line)] bg-[var(--surface)] px-8 py-6">
+        <Reveal className="border border-[var(--line)] bg-[var(--surface)] px-8 py-6">
           <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] mb-2">Physical Gifts</p>
           <p className="text-sm text-[var(--muted)] leading-7">
             Please bring gifts to the venue or contact us directly and we'll arrange pickup.
           </p>
-        </div>
+        </Reveal>
 
-        <p className="text-center text-[10px] tracking-[0.2em] uppercase text-[var(--muted)] opacity-50 mt-2">
-          Thank you for your generosity and love.
-        </p>
+        <Reveal>
+          <p className="text-center text-[10px] tracking-[0.2em] uppercase text-[var(--muted)] opacity-50 mt-2">
+            Thank you for your generosity and love.
+          </p>
+        </Reveal>
 
       </div>
     </div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { BrushStroke } from "./components/BrushStroke";
+import { Reveal } from "./components/Reveal";
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
 
       {/* ── Our Story ─────────────────────────────────────────────────────── */}
       <section className="px-6 py-24 bg-[var(--surface)]">
-        <div className="max-w-2xl mx-auto">
+        <Reveal className="max-w-2xl mx-auto">
           <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-center text-[var(--muted)]">How it began</p>
           <h2 className="text-6xl md:text-7xl text-center mb-2 [font-family:var(--font-script)]">Our Story</h2>
           <div className="flex justify-center mb-14">
@@ -36,7 +37,7 @@ export default function Home() {
             </a>
             <div className="flex-1 h-px bg-[var(--line)]" />
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* ── Celebration CTA ───────────────────────────────────────────────── */}
@@ -45,37 +46,41 @@ export default function Home() {
           <BrushStroke variant="divider" className="w-full max-w-3xl" color="#b09a78" delay={200} duration={1800} />
         </div>
 
-        <p className="relative text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-6">
-          December 18 – 19, 2026 · Halol, Gujarat
-        </p>
-        <h2 className="relative text-5xl md:text-6xl mb-3 [font-family:var(--font-script)]">
-          The Celebrations
-        </h2>
-        <div className="relative flex justify-center mb-8">
-          <BrushStroke variant="underline" className="w-40" color="#b09a78" delay={300} duration={1200} />
-        </div>
-        <p className="relative text-sm text-[var(--muted)] max-w-sm mb-12 leading-7">
-          Haldi, Sangeet, and the Wedding — two days of rituals, music, and dancing at Champaner Heritage Resort.
-        </p>
-        <a
-          href="/events"
-          className="relative group inline-flex items-center gap-3 border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white"
-        >
-          Take me to the celebration
-          <span className="transition-transform group-hover:translate-x-1">→</span>
-        </a>
+        <Reveal className="flex flex-col items-center">
+          <p className="relative text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-6">
+            December 18 – 19, 2026 · Halol, Gujarat
+          </p>
+          <h2 className="relative text-5xl md:text-6xl mb-3 [font-family:var(--font-script)]">
+            The Celebrations
+          </h2>
+          <div className="relative flex justify-center mb-8">
+            <BrushStroke variant="underline" className="w-40" color="#b09a78" delay={300} duration={1200} />
+          </div>
+          <p className="relative text-sm text-[var(--muted)] max-w-sm mb-12 leading-7">
+            Haldi, Sangeet, and the Wedding — two days of rituals, music, and dancing at Champaner Heritage Resort.
+          </p>
+          <a
+            href="/events"
+            className="relative group inline-flex items-center gap-3 border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white"
+          >
+            Take me to the celebration
+            <span className="transition-transform group-hover:translate-x-1">→</span>
+          </a>
+        </Reveal>
       </section>
 
       {/* ── RSVP CTA ──────────────────────────────────────────────────────── */}
       <section className="text-center py-24 px-6 bg-white">
-        <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">Kindly reply by November 1, 2026</p>
-        <h2 className="text-5xl md:text-6xl mb-2 [font-family:var(--font-script)]">Will You Join Us?</h2>
-        <div className="flex justify-center mb-10">
-          <BrushStroke variant="underline" className="w-44" color="#b09a78" delay={100} duration={1200} />
-        </div>
-        <a href="/rsvp" className="inline-block border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white">
-          RSVP Now
-        </a>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">Kindly reply by November 1, 2026</p>
+          <h2 className="text-5xl md:text-6xl mb-2 [font-family:var(--font-script)]">Will You Join Us?</h2>
+          <div className="flex justify-center mb-10">
+            <BrushStroke variant="underline" className="w-44" color="#b09a78" delay={100} duration={1200} />
+          </div>
+          <a href="/rsvp" className="inline-block border border-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase transition-all hover:bg-[var(--foreground)] hover:text-white">
+            RSVP Now
+          </a>
+        </Reveal>
       </section>
     </div>
   );

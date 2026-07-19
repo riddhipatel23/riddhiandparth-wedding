@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { BrushStroke } from '../components/BrushStroke'
+import { Reveal } from '../components/Reveal'
 
 export default function RSVPPage() {
   const [form, setForm] = useState({
@@ -40,7 +41,7 @@ export default function RSVPPage() {
 
   if (status === 'done') {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center px-6">
+      <Reveal className="flex flex-col items-center justify-center min-h-[70vh] text-center px-6">
         <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">RSVP Received</p>
         <h2 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-4">Thank You{form.name ? `, ${form.name}` : ''}</h2>
         <div className="flex justify-center mb-8">
@@ -54,24 +55,26 @@ export default function RSVPPage() {
         {form.hotel && form.attending === 'yes' && (
           <p className="text-xs text-[var(--muted)] mt-6 opacity-70">Hotel interest noted — we'll reach out with booking details.</p>
         )}
-      </div>
+      </Reveal>
     )
   }
 
   return (
     <div className="flex flex-col">
       <section className="px-6 pt-20 pb-14 text-center bg-white border-b border-[var(--line)]">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Kindly reply by November 1, 2026</p>
-        <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">RSVP</h1>
-        <div className="flex justify-center mb-4">
-          <BrushStroke variant="underline" className="w-44" color="#b09a78" delay={100} duration={1200} />
-        </div>
-        <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
-          We can't wait to celebrate with you. Please let us know by the date above.
-        </p>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">Kindly reply by November 1, 2026</p>
+          <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">RSVP</h1>
+          <div className="flex justify-center mb-4">
+            <BrushStroke variant="underline" className="w-44" color="#b09a78" delay={100} duration={1200} />
+          </div>
+          <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
+            We can't wait to celebrate with you. Please let us know by the date above.
+          </p>
+        </Reveal>
       </section>
 
-      <div className="max-w-xl mx-auto w-full px-6 py-16">
+      <Reveal className="max-w-xl mx-auto w-full px-6 py-16">
         <form onSubmit={submit} className="border border-[var(--line)] bg-white px-8 py-10 flex flex-col gap-7">
           <div>
             <label className={label}>Full Name *</label>
@@ -201,7 +204,7 @@ export default function RSVPPage() {
             <p className="text-red-500 text-sm text-center">Something went wrong. Please try again.</p>
           )}
         </form>
-      </div>
+      </Reveal>
     </div>
   )
 }

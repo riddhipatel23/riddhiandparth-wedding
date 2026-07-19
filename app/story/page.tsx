@@ -1,26 +1,29 @@
 import Image from 'next/image'
 import { BrushStroke } from '../components/BrushStroke'
+import { Reveal } from '../components/Reveal'
 
 export default function StoryPage() {
   return (
     <div className="flex flex-col">
 
       <section className="px-6 py-24 text-center bg-white">
-        <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">How it began</p>
-        <h1 className="text-7xl md:text-9xl leading-none [font-family:var(--font-script)] mb-2">
-          Our Story
-        </h1>
-        <div className="flex justify-center mb-4">
-          <BrushStroke variant="underline" className="w-56" color="#b09a78" delay={300} duration={1400} />
-        </div>
-        <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] opacity-60 mt-6">
-          Riddhi &amp; Parth · 2017 – Forever
-        </p>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase mb-4 text-[var(--muted)]">How it began</p>
+          <h1 className="text-7xl md:text-9xl leading-none [font-family:var(--font-script)] mb-2">
+            Our Story
+          </h1>
+          <div className="flex justify-center mb-4">
+            <BrushStroke variant="underline" className="w-56" color="#b09a78" delay={300} duration={1400} />
+          </div>
+          <p className="text-[10px] tracking-[0.25em] uppercase text-[var(--muted)] opacity-60 mt-6">
+            Riddhi &amp; Parth · 2017 – Forever
+          </p>
+        </Reveal>
       </section>
 
       <article className="max-w-2xl mx-auto px-6 py-20 flex flex-col gap-16">
 
-        <div>
+        <Reveal>
           <p className="text-[10px] tracking-[0.35em] uppercase mb-5 text-[var(--muted)]">Chapter One</p>
           <h2 className="text-4xl mb-4 [font-family:var(--font-script)]">The Terrible Joke</h2>
           <BrushStroke variant="underline" className="w-36 mb-8" color="#b09a78" delay={100} duration={1000} />
@@ -30,13 +33,13 @@ export default function StoryPage() {
           <p className="text-base leading-8 text-[var(--muted)]">
             They talked for three hours that night — about their families, about their cities, about whether dal makhani or dal tadka deserves the top spot (this remains unresolved). By the time the party ended, Parth had her number and a plan.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="relative h-80 overflow-hidden">
+        <Reveal className="relative h-80 overflow-hidden">
           <Image src="/photos/couple-rome.jpg" alt="Riddhi and Parth" fill className="object-cover" />
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal>
           <p className="text-[10px] tracking-[0.35em] uppercase mb-5 text-[var(--muted)]">Chapter Two</p>
           <h2 className="text-4xl mb-4 [font-family:var(--font-script)]">Building Something</h2>
           <BrushStroke variant="underline" className="w-36 mb-8" color="#b09a78" delay={100} duration={1000} />
@@ -46,16 +49,16 @@ export default function StoryPage() {
           <p className="text-base leading-8 text-[var(--muted)]">
             It wasn't dramatic. It was the kind of love that builds quietly — in the small decisions, the comfortable silences, the way you start ordering for each other without thinking about it. By year two, they'd stopped imagining a life that didn't include the other person.
           </p>
-        </div>
+        </Reveal>
 
-        <blockquote className="border-l-2 border-[var(--line)] pl-8 py-2">
+        <Reveal as="blockquote" className="border-l-2 border-[var(--line)] pl-8 py-2">
           <p className="text-xl leading-9 italic text-[var(--foreground)] [font-family:var(--font-display)]">
             "I didn't know what I was looking for until I found it, and then it was obvious."
           </p>
           <p className="mt-4 text-[10px] tracking-[0.3em] uppercase text-[var(--muted)]">— Riddhi</p>
-        </blockquote>
+        </Reveal>
 
-        <div>
+        <Reveal>
           <p className="text-[10px] tracking-[0.35em] uppercase mb-5 text-[var(--muted)]">Chapter Three</p>
           <h2 className="text-4xl mb-4 [font-family:var(--font-script)]">Love Across the Distance</h2>
           <BrushStroke variant="underline" className="w-36 mb-8" color="#b09a78" delay={100} duration={1000} />
@@ -74,9 +77,9 @@ export default function StoryPage() {
           <p className="text-base leading-8 text-[var(--muted)]">
             Long distance was never easy, but Parth and Riddhi handled it with patience, trust and love. From Los Angeles to Vancouver, and then from New York to Toronto, they proved that distance could test their love, but it could never weaken it. If anything, it made them stronger.
           </p>
-        </div>
+        </Reveal>
 
-        <div>
+        <Reveal>
           <p className="text-[10px] tracking-[0.35em] uppercase mb-5 text-[var(--muted)]">Chapter Four</p>
           <h2 className="text-4xl mb-4 [font-family:var(--font-script)]">Rome at Golden Hour</h2>
           <BrushStroke variant="underline" className="w-36 mb-8" color="#b09a78" delay={100} duration={1000} />
@@ -89,9 +92,9 @@ export default function StoryPage() {
           <p className="text-base leading-8 text-[var(--muted)]">
             They called their families from a café around the corner, split between laughing and crying, ordering a bottle of Prosecco neither of them could finish because they were too busy talking. Now, a year later, they're asking you to be there when it's official.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="text-center py-10 border-t border-b border-[var(--line)]">
+        <Reveal className="text-center py-10 border-t border-b border-[var(--line)]">
           <p className="text-[10px] tracking-[0.35em] uppercase mb-6 text-[var(--muted)]">
             December 18 – 19, 2026 · Halol, Gujarat
           </p>
@@ -105,7 +108,7 @@ export default function StoryPage() {
           >
             RSVP Now
           </a>
-        </div>
+        </Reveal>
 
       </article>
     </div>

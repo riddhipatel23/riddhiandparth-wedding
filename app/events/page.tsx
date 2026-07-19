@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { BrushStroke } from '../components/BrushStroke'
+import { Reveal } from '../components/Reveal'
 
 export default function EventsPage() {
   return (
@@ -7,21 +8,23 @@ export default function EventsPage() {
 
       {/* Header */}
       <section className="px-6 pt-20 pb-14 text-center bg-white border-b border-[var(--line)]">
-        <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">
-          December 18 – 19, 2026 · Halol, Gujarat
-        </p>
-        <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">The Celebrations</h1>
-        <div className="flex justify-center mb-4">
-          <BrushStroke variant="underline" className="w-48" color="#b09a78" delay={100} duration={1200} />
-        </div>
-        <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
-          Two days of rituals, music, and dancing at Champaner Heritage Resort.
-        </p>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[var(--muted)] mb-4">
+            December 18 – 19, 2026 · Halol, Gujarat
+          </p>
+          <h1 className="text-6xl md:text-7xl [font-family:var(--font-script)] mb-3">The Celebrations</h1>
+          <div className="flex justify-center mb-4">
+            <BrushStroke variant="underline" className="w-48" color="#b09a78" delay={100} duration={1200} />
+          </div>
+          <p className="text-sm text-[var(--muted)] max-w-md mx-auto leading-7">
+            Two days of rituals, music, and dancing at Champaner Heritage Resort.
+          </p>
+        </Reveal>
       </section>
 
       {/* Haldi */}
       <section id="haldi" className="scroll-mt-16 bg-white">
-        <div className="max-w-3xl mx-auto px-6 py-20">
+        <Reveal className="max-w-3xl mx-auto px-6 py-20">
           <div className="border border-[var(--line)]">
             <div className="flex flex-col md:flex-row">
               <div className="flex-1 px-8 py-10">
@@ -59,12 +62,12 @@ export default function EventsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Sangeet */}
       <section id="sangeet" className="scroll-mt-16" style={{ background: 'var(--foreground)' }}>
-        <div className="max-w-3xl mx-auto px-6 py-20">
+        <Reveal className="max-w-3xl mx-auto px-6 py-20">
           <div className="border border-white/10">
             <div className="flex flex-col md:flex-row-reverse">
               <div className="flex-1 px-8 py-10">
@@ -102,12 +105,12 @@ export default function EventsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Wedding */}
       <section id="wedding" className="scroll-mt-16 bg-[var(--surface)]">
-        <div className="max-w-3xl mx-auto px-6 py-20">
+        <Reveal className="max-w-3xl mx-auto px-6 py-20">
           <div className="border border-[var(--line)] bg-white">
             <div className="flex flex-col md:flex-row">
               <div className="flex-1 px-8 py-10">
@@ -142,13 +145,15 @@ export default function EventsPage() {
               </div>
             </div>
           </div>
-        </div>
+        </Reveal>
       </section>
 
       {/* Timeline strip */}
       <section className="py-16 px-6" style={{ background: 'var(--foreground)' }}>
         <div className="max-w-2xl mx-auto">
-          <p className="text-center text-[10px] tracking-[0.35em] uppercase mb-10 text-white/60">Full Schedule at a Glance</p>
+          <Reveal>
+            <p className="text-center text-[10px] tracking-[0.35em] uppercase mb-10 text-white/60">Full Schedule at a Glance</p>
+          </Reveal>
           <div className="flex flex-col gap-0">
             {[
               { day: 'Dec 18', time: '12:00 PM', event: 'Haldi', note: 'Garden Lawn' },
@@ -157,7 +162,7 @@ export default function EventsPage() {
               { day: 'Dec 19', time: '5:00 PM', event: 'Wedding Ceremony', note: 'Wedding Mandap' },
               { day: 'Dec 20', time: '11:00 AM', event: 'Check-out', note: 'Safe travels!' },
             ].map((item, i) => (
-              <div key={i} className="flex items-stretch gap-0">
+              <Reveal key={i} delay={i * 80} duration={700} className="flex items-stretch gap-0">
                 <div className="flex flex-col items-center">
                   <div className="w-3 h-3 rounded-full mt-5 flex-shrink-0" style={{ background: '#b09a78' }} />
                   {i < 4 && <div className="w-px flex-1 bg-white/10" />}
@@ -172,7 +177,7 @@ export default function EventsPage() {
                     <p className="text-xs text-white/40 mt-0.5">{item.note}</p>
                   </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -180,13 +185,15 @@ export default function EventsPage() {
 
       {/* CTA */}
       <section className="text-center py-24 px-6 bg-white">
-        <p className="text-[10px] tracking-[0.4em] uppercase mb-6 text-[var(--muted)]">Don't miss a moment</p>
-        <a
-          href="/rsvp"
-          className="inline-block border border-[var(--foreground)] bg-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase text-white transition-opacity hover:opacity-75"
-        >
-          RSVP Now
-        </a>
+        <Reveal className="flex flex-col items-center">
+          <p className="text-[10px] tracking-[0.4em] uppercase mb-6 text-[var(--muted)]">Don't miss a moment</p>
+          <a
+            href="/rsvp"
+            className="inline-block border border-[var(--foreground)] bg-[var(--foreground)] px-14 py-4 text-[10px] tracking-[0.3em] uppercase text-white transition-opacity hover:opacity-75"
+          >
+            RSVP Now
+          </a>
+        </Reveal>
       </section>
     </div>
   )
